@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "BOOX-website",
+  "description": "A starter project for AngularJS, Theta Chi Website",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/sicter/BOOXweb",
   "license": "MIT",
   "private": true,
   "dependencies": {

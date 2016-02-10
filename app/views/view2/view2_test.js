@@ -1,8 +1,8 @@
 'use strict';
 
-describe('BOOX.view2 module', function() {
+describe('BOOX.views module', function() {
 
-  beforeEach(module('BOOX.view2'));
+  beforeEach(module('BOOX.views'));
 
   describe('view2 controller', function(){
 

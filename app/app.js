@@ -10,5 +10,5 @@ angular.module('BOOX', [
   'BOOX.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/home'});
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);

@@ -1,7 +1,7 @@
 'use strict';
 
 describe('BOOX.version module', function() {
-  beforeEach(module('myApp.version'));
+  beforeEach(module('BOOX.version'));
 
   describe('interpolate filter', function() {
     beforeEach(module(function($provide) {
