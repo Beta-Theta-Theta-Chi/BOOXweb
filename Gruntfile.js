@@ -129,7 +129,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-karma');
 
   grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
-  grunt.registerTask('test', [ 'bower', 'karma:continuous' ]);
+  grunt.registerTask('test', [ 'bower', 'karma:unit' ]);
+  grunt.registerTask('continuoustest', [ 'bower', 'karma:continuous' ]);
   grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
   grunt.registerTask('package', [ 'bower', 'karma:unit', 'html2js:dist', 'concat:dist', 'uglify:dist',
     'clean:temp', 'compress:dist' ]);
