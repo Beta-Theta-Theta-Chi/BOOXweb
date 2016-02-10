@@ -2,7 +2,7 @@ module.exports = function(config){
   config.set({
 
     basePath : './',
-
+    frameworks: ['jasmine'],
     files : [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-route/angular-route.js',
@@ -16,19 +16,22 @@ module.exports = function(config){
       'app/directives/**/*.js'
     ],
 
-    autoWatch : true,
-
-    frameworks: ['jasmine'],
-
-    browsers : ['Chrome, Firefox'],
-
+    preprocessors: {
+      'app/templates/*.html': 'ng-html2js'
+    },
+    reporters: [ 'progress' ],
+    colors: true,
+    autoWatch: false,
+    browsers: [ 'PhantomJS'], // , 'Chrome', 'Firefox'
+    singleRun: true,
     plugins : [
-            'karma-chrome-launcher',
-            'karma-firefox-launcher',
-            'karma-jasmine',
-            'karma-junit-reporter'
-            ],
-
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-phantomjs-launcher',
+      'karma-jasmine',
+      'karma-ng-html2js-preprocessor',
+      'karma-junit-reporter'
+    ],
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
