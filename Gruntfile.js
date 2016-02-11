@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         options: {
           install: true,
           copy: false,
-          targetDir: 'app/bower_components',
+          targetDir: 'bower_components',
           cleanTargetDir: false
         }
       }
