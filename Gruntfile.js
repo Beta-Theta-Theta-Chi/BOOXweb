@@ -45,7 +45,17 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: [ 'app/*.js', 'tmp/*.js' ],
+        src: [ 
+          'app/components/*.js',
+          'app/directives/*.js', 
+          'app/views/*.js', 
+          'app/components/**/*.js', 
+          'app/directives/**/*.js', 
+          'app/views/**/*.js', 
+          '!app/**/*_test.js', 
+          'app/*.js', 
+          'tmp/*.js' 
+        ],
         dest: 'dist/app.js'
       }
     },
@@ -69,14 +79,14 @@ module.exports = function(grunt) {
 
     watch: {
       dev: {
-        files: [ 'Gruntfile.js', 'app/*.js', '*.html' ],
-        tasks: [ 'karma:unit', 'html2js:dist', 'concat:dist', 'clean:temp' ],
+        files: [ 'Gruntfile.js', 'app/*.js', 'app/**/*.js', 'app/**/**/*.html', '*.html', ],
+        tasks: [ 'html2js:dist', 'concat:dist', 'clean:temp'],
         options: {
           atBegin: true
         }
       },
       min: {
-        files: [ 'Gruntfile.js', 'app/*.js', '*.html' ],
+        files: [ 'Gruntfile.js', 'app/*.js', 'app/**/*.js', 'app/**/**/*.html', '*.html' ],
         tasks: [ 'karma:unit', 'html2js:dist', 'concat:dist', 'clean:temp', 'uglify:dist' ],
         options: {
           atBegin: true
@@ -128,10 +138,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-karma');
 
-  grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
+  grunt.registerTask('dev', [ 'bower', 'connect:server', 'karma:unit', 'watch:dev' ]);
+  grunt.registerTask('minified', [ 'bower', 'connect:server', 'karma:unit', 'watch:min' ]);
   grunt.registerTask('test', [ 'bower', 'karma:unit' ]);
   grunt.registerTask('continuoustest', [ 'bower', 'karma:continuous' ]);
-  grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
   grunt.registerTask('package', [ 'bower', 'karma:unit', 'html2js:dist', 'concat:dist', 'uglify:dist',
     'clean:temp', 'compress:dist' ]);
+  grunt.registerTask('production', [ 'bower', 'karma:unit', 'html2js:dist', 'concat:dist', 'uglify:dist',
+    'clean:temp']);
 };

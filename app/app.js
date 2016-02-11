@@ -3,7 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('BOOX', [
   'ngRoute',
-  'ui.bootstrap',
+  // 'ui.bootstrap',
 
   'BOOX.directives',
   'BOOX.views',

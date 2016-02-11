@@ -1,0 +1,24 @@
+
+@font-face {
+  font-family: 'Parango';
+  src: url('ParangoOT.eot?#iefix') format('embedded-opentype'),  url('ParangoOT.otf')  format('opentype'),
+	     url('ParangoOT.woff') format('woff'), url('ParangoOT.ttf')  format('truetype'), url('ParangoOT.svg#ParangoOT') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parango-Italic';
+  src: url('ParangoOT-Italic.eot?#iefix') format('embedded-opentype'),  url('ParangoOT-Italic.otf')  format('opentype'),
+	     url('ParangoOT-Italic.woff') format('woff'), url('ParangoOT-Italic.ttf')  format('truetype'), url('ParangoOT-Italic.svg#ParangoOT-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parango-Bold';
+  src: url('ParangoOT-Bold.eot?#iefix') format('embedded-opentype'),  url('ParangoOT-Bold.otf')  format('opentype'),
+	     url('ParangoOT-Bold.woff') format('woff'), url('ParangoOT-Bold.ttf')  format('truetype'), url('ParangoOT-Bold.svg#ParangoOT-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
