@@ -6,8 +6,7 @@ angular.module('BOOX', [
   // 'ui.bootstrap',
 
   'BOOX.directives',
-  'BOOX.views',
-  'BOOX.version'
+  'BOOX.views'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
