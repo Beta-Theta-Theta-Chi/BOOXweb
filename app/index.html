@@ -12,11 +12,24 @@
   <meta name="description" content="Beta Theta Chapter of Theta Chi, founded March 24th 1940. Extending helping hand to all who seek it, and creating a brotherhood of Resolute Men at Drexel University">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  <!-- CSS -->
   <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
-  <script src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <link rel="stylesheet" href="app.css">
 
+  <link rel="stylesheet" href="../bower_components/bootstrap-css-only/css/bootstrap.min.css">
+
+  <!-- JS -->
+  <script src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="../bower_components/angular/angular.min.js"></script>
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script> -->
+  <script src="../bower_components/angular-route/angular-route.min.js"></script>
+  <link rel="stylesheet" href="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js">
+  <!-- <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script> -->
+  
+  <!-- <link rel="stylesheet" href="app.css"> -->
+
+  <!-- FAVICON -->
   <link rel="Shortcut Icon" href="graphics/images/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="graphics/images/72px.png" />
   <link rel="apple-touch-icon" sizes="76x76" href="graphics/images/76px.png" />
@@ -36,21 +49,7 @@
 
   <div ng-view></div>
 
-  <!-- <div>OX website: v<span app-version></span></div> -->
-
-  <!-- ANGULAR DEPENDANCIES -->
-  <script src="../bower_components/angular/angular.min.js"></script>
-  <script src="../bower_components/angular-route/angular-route.min.js"></script>
-  <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-    <!-- In production use:
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script> -->
-
   <!-- APP FILES -->
   <script src="../dist/app.js"></script>
-
-    <!-- Components -->
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>
